@@ -23,6 +23,8 @@ function melonCrawler() {
         };
       });
       console.log(crawledMusic)
+    } else {
+      console.log("server response error")
     }
   })
 }
