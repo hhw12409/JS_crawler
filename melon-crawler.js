@@ -16,8 +16,13 @@ function melonCrawler() {
       const $musicList = $('#lst50');
 
       $musicList.each(function(i) {
-        console.log(i)
-      })
+        crawledMusic[i] ={
+          title : $(this).find('#lst50 > td > div > div > div.ellipsis.rank01 > span > a').text().trim(),
+          artist : $(this).find('#lst50 > td > div > div > div.ellipsis.rank02 > a').text(),
+          img : $(this).find('#lst50 > td > div > a > img').attr('src')
+        };
+      });
+      console.log(crawledMusic)
     }
   })
 }
